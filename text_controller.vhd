@@ -60,10 +60,10 @@ begin
 		last_chosen_text := CHOSEN_TEXT;
 	end process;
 	
-	char_codes(0) <= character'pos(TITLE_TEXT(char_position));
-	char_codes(1) <= character'pos(INTRO_TEXT(char_position));
-	char_codes(2) <= character'pos(WIN_TEXT(char_position));
-	char_codes(3) <= character'pos(LOSE_TEXT(char_position));
+	-- put as many char_codes row as phrases you need to display
+	-- following strictly the order you defined them in the message type definition
+	char_codes(0) <= character'pos(TEXT_1(char_position));
+	char_codes(1) <= character'pos(TEXT_2(char_position));
 	
 	font_address <= char_codes(message'POS(CHOSEN_TEXT)) * 16 + y_counter;
 	
