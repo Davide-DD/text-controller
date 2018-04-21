@@ -60,8 +60,8 @@ begin
 		last_chosen_text := CHOSEN_TEXT;
 	end process;
 	
-	-- put as many char_codes row as phrases you need to display
-	-- following strictly the order you defined them in the message type definition
+	-- put as many char_codes' rows as phrases you need to display and then
+	-- change numbers and labels following strictly the order you defined them in the message type definition
 	char_codes(0) <= character'pos(TEXT_1(char_position));
 	char_codes(1) <= character'pos(TEXT_2(char_position));
 	
