@@ -15,7 +15,7 @@ This is the main module: its logic remains unchanged from Derek Wang's one, I ju
 1. PIXEL: it will tell you when you need to write to the current coordinates of the framebuffer
 
 ## How to use it
-Check my project linked before, to see an example of how I implemented it. 
+Check my project linked before, to see an example of how I implemented it.  
 I suggest you to create a *package*, in which you define all your **string constants** (all your phrases that will need to be displayed on screen sooner or later) and put the **message type definition** (you can find it in the previous section), that is basically a list of labels for your phrases. Then, you also need to put this other **type definition** `type codes is array(natural range<>) of integer;` (it's a dependency for text_controller). Finally, you need to add this row `char_codes(n) <= character'pos(TEXT_NAME(char_position));` many times: one for each phrase you need to display; you only need to change n and TEXT_NAME: *n* stands for the integer associated to the phrase (you define it implicitly when you declare labels for your phrases in the message type, because message is an enum) and *TEXT_NAME* stands for the label you assigned to the phrase at position *n*. You can find a simple **text_package** in this repo with the message and codes types definition, you can start with that: you only need to modify the message type and add your strings to be displayed.
 
 ## License and more
