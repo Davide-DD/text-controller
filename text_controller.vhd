@@ -1,13 +1,3 @@
--- Pixel_On_Text2 determines if the current pixel is on text and make it easiler to call from verilog
--- param:
---   display text
--- input: 
---   VGA clock(the clk you used to update VGA)
---   top left corner of the text area -- positionX, positionY
---   current X and Y position
--- output:
---   a bit that represent whether is the pixel in text
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
