@@ -4,6 +4,9 @@ use ieee.std_logic_1164.all;
 
 package text_package is
 	
+	constant FONT_WIDTH : integer := 8;
+	constant FONT_HEIGHT : integer := 16;
+	
 	-- put all your strings here
 	constant TEXT_1   : string := "";
 	constant TEXT_2   : string := "";
